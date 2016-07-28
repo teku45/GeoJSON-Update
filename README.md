@@ -1,7 +1,7 @@
 
-## Web-DROP ##
+## Web-DROP ## 
 Website Display of Realtime Orbital Profile
-
+by: Sidd Subramanyam
 
 ----------
 Web-DROP is a live online display of a satellite that follows a pre-generated orbital profile that is in the GeoJSON format. It was created for the NASA IV&V Spaceflight Design Challenge in preparation for its orbital payload, OC-Flight-1.
