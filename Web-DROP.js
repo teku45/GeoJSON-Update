@@ -1,5 +1,5 @@
 function mainscript() {
-  //main function
+  //THIS FILE IS JUST A COPY THE REAL SCRIPT SHOULD BE EDITED AT THE LINK PROVIDED IN THE README
   
   //Get values for request
   var sha = getSHA();
