@@ -1,11 +1,11 @@
 function mainscript() {
-  //THIS FILE IS JUST A COPY THE REAL SCRIPT SHOULD BE EDITED AT THE LINK PROVIDED IN THE README
+  //THE ACTUAL FILE MUST BE EDITED FROM THE README LINK
   
   //Get values for request
   var sha = getSHA();
-  var authenticationToken = "ca3c8db838868a7a6f16f48c5c2fde1df1c22b5a";
+  var authenticationToken = "token masked for safety";
   var content = buildJSON();
-  var url = "https://api.github.com/repos/teku45/GeoJSON-Update/contents/mygeojson.json";
+  var url = "https://api.github.com/repos/teku45/Web-DROP/contents/Map.json";
   
   //construct request to be sent
   var headers = {
@@ -13,7 +13,7 @@ function mainscript() {
   };
   
   var payload = {  
-    "path": "mygeojson.json",
+    "path": "Map.json",
     "message": "Initial Commit",
     "committer":{  
       "name": "Sidd",
@@ -78,7 +78,7 @@ function buildJSON(){
 
 function getOrbitalProfile(){
   //retrieves GeoJSON of entire profile from github and extracts the array of points
-  var profileJSON = JSON.parse(UrlFetchApp.fetch("https://raw.githubusercontent.com/teku45/GeoJSON-Update/master/Profile.json"));
+  var profileJSON = JSON.parse(UrlFetchApp.fetch("https://raw.githubusercontent.com/teku45/Web-DROP/master/Profile.json"));
   var profileArray = profileJSON.features[0].geometry.coordinates;
   return profileArray;
 }
@@ -148,10 +148,11 @@ function getSHA(){
   //Get SHA Key for the GeoJSON File
   var options = {
     "headers": {
-    "Authorization" : "token " + "ca3c8db838868a7a6f16f48c5c2fde1df1c22b5a",
-    }
+    "Authorization" : "token " + "e03ffa53d94813d593fc5abb714c77018da4ef94",
+    },
   };
-  var url = "http://api.github.com/repos/teku45/GeoJSON-Update/contents/mygeojson.json";
+  var url = "https://api.github.com/repos/teku45/Web-DROP/contents/Map.json";
   var response = JSON.parse(UrlFetchApp.fetch(url, options));
   return(response.sha);
+  Logger.log(response);
 }
