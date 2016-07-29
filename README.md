@@ -20,7 +20,7 @@ Finally, the map can be embedded by adding this code snippet to any html website
 
 
 ```
-<iframe height="420" width="620" frameborder="0" src="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/teku45/GeoJSON-Update/master/mygeojson.json"></iframe>
+<iframe height="420" width="620" frameborder="0" src="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/teku45/Web-DROP/master/Map.json"></iframe>
 ```
 
 
