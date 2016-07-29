@@ -1,9 +1,9 @@
 function mainscript() {
-  //THE ACTUAL FILE MUST BE EDITED FROM THE README LINK
+  //main function
   
   //Get values for request
-  var sha = getSHA();
-  var authenticationToken = "token masked for safety";
+  var sha = getSHA(); 
+  var authenticationToken = PropertiesService.getScriptProperties().getProperty('AuthenticationToken');
   var content = buildJSON();
   var url = "https://api.github.com/repos/teku45/Web-DROP/contents/Map.json";
   
@@ -148,7 +148,7 @@ function getSHA(){
   //Get SHA Key for the GeoJSON File
   var options = {
     "headers": {
-    "Authorization" : "token " + "e03ffa53d94813d593fc5abb714c77018da4ef94",
+    "Authorization" : "token " + PropertiesService.getScriptProperties().getProperty('AuthenticationToken')
     },
   };
   var url = "https://api.github.com/repos/teku45/Web-DROP/contents/Map.json";
